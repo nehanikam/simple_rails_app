@@ -1,20 +1,23 @@
 default: &default
   adapter: postgresql
-  host: localhost
+  host: sephoradb.cgp62gfwcyhi.ap-south-1.rds.amazonaws.com
 
 development:
   <<: *default
-  database: simple_rails_app_development
+  database: sephoradb
+  username: root
   password: password
 
 
 test: &test
   <<: *default
-  database: simple_rails_app_test
+  database: sephoradb
+  username: root
   min_messages: warning
   password: password
 
 production:
   <<: *default
-  database: simple_rails_app_production
+  database: sephoradb
+  username: root
   password: password
